@@ -140,6 +140,10 @@ flex-wrap:wrap;
 justify-content:center;
 }
 
+.botones a{
+text-decoration:none;
+}
+
 .botones button{
 padding:14px 32px;
 font-size:1rem;
@@ -148,6 +152,15 @@ border-radius:30px;
 cursor:pointer;
 font-weight:600;
 transition:0.3s;
+}
+
+.botones a{
+text-decoration: none;
+color: inherit;
+}
+
+.botones a:hover{
+text-decoration: none;
 }
 
 .contactenos{
