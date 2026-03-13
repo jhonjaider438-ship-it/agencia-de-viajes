@@ -1,0 +1,229 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: "Poppins", sans-serif;
+}
+
+/* HEADER */
+
+.encabezado{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:#0565a9;
+}
+
+/* LOGO */
+
+.logotex{
+font-size:24px;
+font-weight:600;
+color:white;
+}
+
+/* LISTA DE NAVEGACION */
+
+.listnave{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+.linknave{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+.linknave:hover{
+color:#003566;
+}
+
+/* HAMBURGUESA */
+
+.hamburguer{
+display:none;
+flex-direction:column;
+cursor:pointer;
+gap:5px;
+}
+
+.hamburguer span{
+width:25px;
+height:3px;
+background:white;
+display:block ;
+}
+
+/* Reset básico */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header{
+    text-align: center;
+    padding: 40px;
+    background: #0077b6;
+    color: white;
+}
+
+header h1{
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p{
+    font-size: 18px;
+}
+
+.contactenos {
+  max-width: 560px;
+  margin: 2rem auto;
+  padding: 2rem 2.5rem;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+}
+
+.contactenos h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 0 0 0.5rem;
+  color: #1a1a1a;
+}
+
+.contactenos > p {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0 0 1.75rem;
+  line-height: 1.6;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 9px 12px;
+  font-size: 0.95rem;
+  color: #1a1a1a;
+  background: #f7f7f7;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #7f77dd;
+  box-shadow: 0 0 0 3px rgba(127, 119, 221, 0.15);
+  background: #fff;
+}
+
+.btn-enviar {
+  margin-top: 0.5rem;
+  padding: 10px 24px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #fff;
+  background: #534AB7;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.btn-enviar:hover {
+  background: #3C3489;
+}
+
+.btn-enviar:active {
+  transform: scale(0.98);
+}
+
+/* RESPONSIVE BARRA NAVEGACION */
+
+@media (max-width:768px){
+
+/* muestra el boton hamburguesa */
+.hamburguer{
+display:flex;
+}
+
+/* menu oculto por defecto */
+.listnave{
+position:absolute;
+top:80px;
+left:0;
+width:100%;
+background:#0565a9;
+flex-direction:column;
+align-items:center;
+gap:25px;
+padding:25px 0;
+display:none;
+}
+
+/* cuando se activa el checkbox se muestra el menu */
+#menu-toggle:checked ~ .encabezado .listnave{
+display:flex;
+}
+
+/* links mas grandes para celular */
+.linknave{
+font-size:18px;
+}
+
+}
+
+/* celulares pequeños */
+
+@media (max-width:480px){
+
+.encabezado{
+padding:18px 20px;
+}
+
+.logotex{
+font-size:22px;
+}
+
+.listnave{
+gap:20px;
+}
+
+}

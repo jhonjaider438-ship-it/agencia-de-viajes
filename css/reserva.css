@@ -1,0 +1,279 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: "Poppins", sans-serif;
+}
+
+body{
+padding-top:90px;
+}
+
+.encabezado{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:#0565a9;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+z-index:1000;
+}
+
+
+.logotex{
+font-size:28px;
+font-weight:600;
+color:white;
+letter-spacing:1px;
+}
+
+
+.listnave{
+display:flex;
+list-style:none;
+gap:35px;
+}
+
+.linknave{
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.linknave:hover{
+color:#003566;
+}
+
+/* HAMBURGUESA */
+
+.hamburguer{
+display:none;
+flex-direction:column;
+cursor:pointer;
+gap:6px;
+}
+
+.hamburguer span{
+width:28px;
+height:3px;
+background:white;
+border-radius:5px;
+}
+
+
+#menu-toggle{
+display:none;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
+    background-color: #f2f6fb;
+    padding: 40px;
+}
+
+.reserva {
+    background: white;
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.titulo {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #0565a9;
+    font-family: "playfair display", serif;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.campo label {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.campo input,
+.campo select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: #0565a9;
+    outline: none;
+    box-shadow:0 0 5px rgba(5, 101, 169, 0.2);
+}
+
+.boton-reserva{
+margin-top:10px;
+padding:12px;
+background:#e2750f;
+color:white;
+border:none;
+border-radius:25px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.boton-reserva:hover{
+background:#ff8f29;
+transform:translateY(-2px);
+}
+
+/* ============================= */
+/* PANTALLAS MEDIANAS (TABLETS) */
+/* ============================= */
+
+@media (max-width:1024px){
+
+.encabezado{
+padding:20px 30px;
+}
+
+.listnave{
+gap:20px;
+}
+
+.reserva{
+max-width:450px;
+padding:35px;
+}
+
+.titulo{
+font-size:26px;
+}
+
+}
+
+
+/* ============================= */
+/* TABLETS Y CELULARES GRANDES */
+/* ============================= */
+
+@media (max-width:768px){
+
+/* MENU HAMBURGUESA */
+
+.hamburguer{
+display:flex;
+}
+
+.listnave{
+position:absolute;
+top:80px;
+left:0;
+width:100%;
+background:#0565a9;
+flex-direction:column;
+align-items:center;
+gap:25px;
+padding:25px 0;
+display:none;
+}
+
+#menu-toggle:checked ~ .encabezado .listnave{
+display:flex;
+}
+
+/* FORMULARIO */
+
+main{
+padding:120px 20px 40px 20px;
+}
+
+.reserva{
+max-width:420px;
+padding:30px;
+}
+
+.titulo{
+font-size:24px;
+}
+
+.campo input,
+.campo select{
+font-size:15px;
+}
+
+.boton-reserva{
+font-size:15px;
+}
+
+}
+
+
+/* ============================= */
+/* CELULARES */
+/* ============================= */
+
+@media (max-width:480px){
+
+.encabezado{
+padding:18px 20px;
+}
+
+.logotex{
+font-size:22px;
+}
+
+/* FORMULARIO */
+
+.reserva{
+width:100%;
+max-width:100%;
+padding:25px;
+border-radius:12px;
+}
+
+.titulo{
+font-size:22px;
+}
+
+.campo label{
+font-size:14px;
+}
+
+.campo input,
+.campo select{
+font-size:14px;
+padding:9px;
+}
+
+.boton-reserva{
+width:100%;
+font-size:15px;
+}
+
+}

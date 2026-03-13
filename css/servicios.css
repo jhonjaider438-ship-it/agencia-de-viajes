@@ -1,0 +1,262 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: "Poppins", sans-serif;
+}
+
+/* HEADER */
+
+.encabezado{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:#0565a9;
+}
+
+/* LOGO */
+
+.logotex{
+font-size:24px;
+font-weight:600;
+color:white;
+}
+
+/* LISTA DE NAVEGACION */
+
+.listnave{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+.linknave{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+.linknave:hover{
+color:#003566;
+}
+
+/* HAMBURGUESA */
+
+.hamburguer{
+display:none;
+flex-direction:column;
+cursor:pointer;
+gap:5px;
+}
+
+.hamburguer span{
+width:25px;
+height:3px;
+background:white;
+display:block ;
+}
+
+/* Reset básico */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header{
+    text-align: center;
+    padding: 40px;
+    background: #0077b6;
+    color: white;
+}
+
+header h1{
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p{
+    font-size: 18px;
+}
+
+/* Sección hoteles */
+.hoteles{
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Tarjetas */
+.hotel-card{
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+/* Hover tarjeta */
+.hotel-card:hover{
+    transform: translateY(-5px);
+}
+
+/* Imagen */
+.hotel-card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+/* Título */
+.hotel-card h2{
+    font-size: 22px;
+    padding: 15px;
+}
+
+/* Texto */
+.hotel-card p{
+    padding: 0 15px 20px 15px;
+    font-size: 15px;
+    color: #555;
+}
+
+/* Botón reservar pequeño con transición elegante */
+.btn-reservar{
+    display: block;
+    width: 120px;
+    margin: 15px auto 20px auto;
+    padding: 8px 0;
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(2, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-reservar:hover{
+    background-color: #005f86;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+.footer{
+    background:#0d1b2a;
+    color:white;
+    padding:40px 0 20px;
+}
+
+.footer-contenido{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    max-width:1200px;
+    margin:auto;
+}
+
+.footer-seccion{
+    width:300px;
+    margin:10px;
+}
+
+.footer-seccion h2{
+    color:#00b4d8;
+    margin-bottom:10px;
+}
+
+.footer-seccion h3{
+    margin-bottom:10px;
+}
+
+.footer-seccion ul{
+    list-style:none;
+    padding:0;
+}
+
+.footer-seccion ul li{
+    margin-bottom:8px;
+}
+
+.footer-seccion ul li a{
+    color:white;
+    text-decoration:none;
+}
+
+.footer-seccion ul li a:hover{
+    color:#00b4d8;
+}
+
+.footer-bottom{
+    text-align:center;
+    margin-top:20px;
+    border-top:1px solid #555;
+    padding-top:10px;
+}
+
+/* RESPONSIVE BARRA NAVEGACION */
+
+@media (max-width:768px){
+
+/* muestra el boton hamburguesa */
+.hamburguer{
+display:flex;
+}
+
+/* menu oculto por defecto */
+.listnave{
+position:absolute;
+top:80px;
+left:0;
+width:100%;
+background:#0565a9;
+flex-direction:column;
+align-items:center;
+gap:25px;
+padding:25px 0;
+display:none;
+}
+
+/* cuando se activa el checkbox se muestra el menu */
+#menu-toggle:checked ~ .encabezado .listnave{
+display:flex;
+}
+
+/* links mas grandes para celular */
+.linknave{
+font-size:18px;
+}
+
+}
+
+/* celulares pequeños */
+
+@media (max-width:480px){
+
+.encabezado{
+padding:18px 20px;
+}
+
+.logotex{
+font-size:22px;
+}
+
+.listnave{
+gap:20px;
+}
+
+}
